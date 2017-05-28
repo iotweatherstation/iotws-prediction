@@ -7,28 +7,33 @@ Autor: Edwin Montoya - emontoya@eafit.edu.co
 
 Proyecto en Java, con Eclipse.
 
-Se crearán varias clases para realizar la predicción.
+## ejecutarlo:
 
-1. getData() -> se conecta al servidor, y descarga las ultimas 24 horas de muestras por usuario.
-
-$ java getData anietog1
+$ java Prediction emontoya
 $
 
-en el directorio local, queda un archivo anietog1.csv para ser posteriormente procesado.
+## Descripción de métodos de la clase "Prediction.java" para realizar la predicción.
 
-2. Prediccion() -> pendiente de desarrollar
+1. public void getTempHumidByUser(String username)
 
-dejará el resultado de la predicción en un archivo: ej: anietog1.txt
-de la forma:
+se conecta al servidor, y descarga las ultimas 24 horas de muestras para el usuario username
 
-anietog1, predtemp, predhumid, timestamp
+2. public void saveTempHumidByUser(String username)
 
-3. SendPrediction() -> pendiente de desarrollar
+se conecta al servidor, y descarga las ultimas 24 horas de muestras para el usuario username y lo salva en un archivo local llamado username.csv (esta rutina es opcional, realmente no se requiere para la predicción)
 
-enviará al servidor los datos de predicción para el usuario.
+3. public void loadSample(String line)
 
-4. processAll() -> pendiente de implementar
+carga una muestra en el arreglo en memoria: samples[i]
 
-en secuencia invocara: getData() -> Prediction() -> sendPrediction()
+4. public void sendPrediction() 
 
+envia al servidor una predicción de temp y humid para un idhome dado
 
+5. public void getPrediction() 
+
+trae del servidor la última predicción para el idhome dado.
+
+6. public void calcPrediccion()
+
+Pendiente de implementar el cálculo de la predicción futura de temp y humid basada en serie de tiempo por promedio móvil

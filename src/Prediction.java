@@ -122,6 +122,10 @@ public class Prediction {
 		
 	}
 	
+	public void calcPrediction() {
+		// Pendiente de implementar el cálculo de la predicción futura de temp y humid basada en serie de tiempo por promedio móvil
+	}
+	
 	public static void main(String[] args) {
 		
 		/* Este programa se ejecuta así:
