@@ -10,7 +10,6 @@ Proyecto en Java, con Eclipse.
 ## ejecutarlo:
 
 $ java Prediction emontoya
-$
 
 ## Descripción de métodos de la clase "Prediction.java" para realizar la predicción.
 
